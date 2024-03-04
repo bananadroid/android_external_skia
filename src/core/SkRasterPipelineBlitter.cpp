@@ -21,8 +21,13 @@
 #include "src/core/SkOpts.h"
 #include "src/core/SkRasterPipeline.h"
 #include "src/shaders/SkShaderBase.h"
-
 #include "src/utils/SkBlitterTrace.h"
+#include <semaphore.h>
+#include <assert.h>
+#include <pthread.h>
+#include <sys/sysinfo.h>
+#define SK_BLITTER_TRACE_IS_RASTER_PIPELINE
+
 #include <semaphore.h>
 #include <assert.h>
 #include <pthread.h>
